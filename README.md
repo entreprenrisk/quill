@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://quilljs.com/" title="Quill">Quill Rich Text Editor</a>
+  <a href="https://quilljs.com/" title="Quill">Quill Rich Text Editor with custom image handler patch</a>
 </h1>
 <p align="center">
   <a href="https://quilljs.com/" title="Quill"><img alt="Quill Logo" src="https://quilljs.com/assets/images/logo.svg" width="180"></a>
@@ -31,6 +31,7 @@
     <img src="https://cdn.quilljs.com/badge.svg?v=2" alt="Test Status">
   </a>
 </p>
+This fork adds the custom image handler functionality of [jackmu95](https://github.com/jackmu95) (see https://github.com/quilljs/quill/pull/995).
 
 [Quill](https://quilljs.com/) is a modern rich text editor built for compatibility and extensibility. It was created by [Jason Chen](https://twitter.com/jhchen) and [Byron Milligan](https://twitter.com/byronmilligan) and actively maintained by [Slab](https://slab.com).
 

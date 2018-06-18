@@ -127,18 +127,16 @@ BaseTheme.DEFAULTS = extend(true, {}, Theme.DEFAULTS, {
             fileInput.classList.add('ql-image');
             fileInput.addEventListener('change', () => {
               if (fileInput.files != null && fileInput.files[0] != null) {
-                let reader = new FileReader();
-                reader.onload = (e) => {
+                this.quill.options.imageHandler(fileInput.files[0], (result) => {
                   let range = this.quill.getSelection(true);
                   this.quill.updateContents(new Delta()
                     .retain(range.index)
                     .delete(range.length)
-                    .insert({ image: e.target.result })
+                    .insert({ image: result })
                   , Emitter.sources.USER);
                   this.quill.setSelection(range.index + 1, Emitter.sources.SILENT);
                   fileInput.value = "";
-                }
-                reader.readAsDataURL(fileInput.files[0]);
+                });
               }
             });
             this.container.appendChild(fileInput);
